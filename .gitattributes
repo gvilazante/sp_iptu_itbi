@@ -1,0 +1,5 @@
+# Os scripts R originais estão em Latin-1 (Windows-1252) e com finais de
+# linha do Windows. "-text" impede o Git de converter finais de linha, para
+# que o commit guarde os arquivos byte a byte como vieram do Drive.
+*.R -text
+*.xlsx binary

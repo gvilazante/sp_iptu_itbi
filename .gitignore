@@ -1,0 +1,50 @@
+# ---------------------------------------------------------------
+# Dados ficam fora do Git (moram no Google Drive, em
+# G:\My Drive\data\sync_onedrive\RCoding\sp_market_analysis\DB)
+# ---------------------------------------------------------------
+*.parquet
+*.rds
+*.RData
+*.rda
+*.csv
+*.csv.gz
+*.zip
+*.kmz
+*.kml
+*.shp
+*.shx
+*.dbf
+*.prj
+*.xlsx
+*.xls
+
+# Exceção: tabela manual de normalização de logradouros, lida pela
+# library_sp_market.R. É regra de limpeza, não dado.
+!1_pipeline_R/titulos_ajustes_logradouros.xlsx
+
+# ---------------------------------------------------------------
+# Segredos: chaves de API (Google, Mapbox) e credenciais do GCP
+# ---------------------------------------------------------------
+.Renviron
+*.json.key
+service_account*.json
+
+# ---------------------------------------------------------------
+# R / RStudio
+# ---------------------------------------------------------------
+.Rhistory
+.Rproj.user/
+.Ruserdata
+temp_kmz/
+temp_shp/
+
+# ---------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------
+__pycache__/
+.venv/
+
+# Atalhos e lixo do Drive/Windows
+desktop.ini
+Thumbs.db
+*.tmp
