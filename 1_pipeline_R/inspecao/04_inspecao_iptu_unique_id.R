@@ -1,0 +1,12 @@
+# SOMENTE LEITURA: iptu_unique_id.rds
+suppressPackageStartupMessages(library(data.table))
+u <- readRDS("G:/My Drive/data/sync_onedrive/RCoding/sp_market_analysis/DB/core_output/iptu_unique_id.rds"); setDT(u)
+cat("Linhas:", nrow(u), "| colunas:", ncol(u), "| MB em memória:", round(object.size(u)/1e6), "\n")
+cat("Contribuintes distintos:", uniqueN(u[["NUMERO DO CONTRIBUINTE"]]), "\n")
+print(names(u))
+cat("\nfirst_seen:\n"); print(table(u$first_seen))
+cat("\nlast_seen:\n"); print(table(u$last_seen))
+cat("\nlat_cep preenchido:", round(100*mean(!is.na(u$lat_cep)),2), "% | lat_quadra:", round(100*mean(!is.na(u$lat_quadra)),2), "%\n")
+cat("geo_id vazio:", sum(is.na(u$geo_id) | u$geo_id == ""), "\n")
+cat("geo_id distintos:", uniqueN(u$geo_id), " | lotes F:", sum(grepl("F", u$geo_id)), " | unidades em condomínio C:", sum(grepl("C", u$geo_id)), "\n")
+print(head(u[, .(`NUMERO DO CONTRIBUINTE`, `NUMERO DO CONDOMINIO`, geo_id, first_seen, last_seen)], 6))
