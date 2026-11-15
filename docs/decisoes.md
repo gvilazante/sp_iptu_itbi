@@ -11,7 +11,7 @@ Cada entrada tem um número (`D-NNN`), citado no comentário do código alterado
 - **Decisão:** as chaves foram movidas para `1_pipeline_R/.Renviron`, que o `.gitignore` exclui. A `library` passa a ler o arquivo com `readRenviron(".Renviron")` logo depois do `setwd()`. `.Renviron.example` documenta as variáveis (`GOOGLE_API_KEY`, `GOOGLEGEOCODE_API_KEY`, `MAPBOX_API_KEY`).
 - **Diferença em relação ao original:** só as linhas 18–19 da `library_sp_market.R` (substituídas por três linhas). Todo o resto é idêntico byte a byte ao arquivo do Drive.
 - **Efeito nos números:** nenhum.
-- **Recomendação pendente:** gerar chaves novas nos painéis do Google Cloud e do Mapbox, porque as atuais circularam no Drive. Ação do Guilherme.
+- **Chaves atuais mantidas** (decisão do Guilherme em 2026-11-15: não gerar chaves novas).
 - **Commit:** o mesmo que introduz os scripts no repositório (as chaves nunca entraram no histórico do Git).
 
 ---

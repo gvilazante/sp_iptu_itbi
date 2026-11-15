@@ -24,7 +24,6 @@ Pesquisa quantitativa sobre a dinâmica imobiliária de São Paulo (1995–2026)
 CLAUDE.md                 # este arquivo
 docs/decisoes.md          # registro de decisões e correções (D-001, D-002, ...)
 docs/inspecao_2026-11-15.md  # o que a inspeção dos dados mostrou
-docs/agenda_pesquisa.md   # (pendente) agenda vinda do ChatGPT
 1_pipeline_R/             # Frente 1: pipeline de limpeza em R
 2_bigquery/               # Frente 2: carga e consultas no BigQuery
 3_pesquisa/               # Frente 3: econometria em R
